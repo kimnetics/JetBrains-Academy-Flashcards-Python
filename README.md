@@ -12,13 +12,15 @@ The application can quiz the user by presenting a term and asking for its defini
 
 The application tracks the number of wrong answers for each term so that it can display the hardest term.
 
+The application records all inputs and outputs and may be commanded to save these values to a file.
+
 ## Notes
 
 The relative directory structure was kept the same as the one used in my JetBrains Academy solution.
 
 The `--import_from=` command line argument allows specifying a flashcard data file name which will be read during application start up.
 
-The `--export_to=` command line argument allows specifying a flashcard data file which will be saved to during application shut down.
+The `--export_to=` command line argument allows specifying a flashcard data file name which will be saved to during application shut down.
 
 Here is an example session:
 
@@ -48,36 +50,34 @@ The definition for card:
 > gobbles
 The pair ("turkey":"gobbles") has been added.
 Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> ask
+How many times to ask?
+> 4
+Print the definition of "cat":
+> meows
+Correct!
+Print the definition of "turkey":
+> barks
+Wrong. The right answer is "gobbles", but your definition is correct for "dog".
+Print the definition of "cat":
+> moos
+Wrong. The right answer is "meows".
+Print the definition of "turkey":
+> gobbles
+Correct!
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 > export
 File name:
 > flashcards.json
 3 cards have been saved.
 Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-> ask
-How many times to ask?
-> 2
-Print the definition of "turkey":
-> gobbles
-Correct!
-Print the definition of "turkey":
-> barks
-Wrong. The right answer is "gobbles", but your definition is correct for "dog".
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-> ask
-How many times to ask?
-> 3
-Print the definition of "dog":
-> barks
-Correct!
-Print the definition of "cat":
-> meows
-Correct!
-Print the definition of "dog":
-> gobbles
-Wrong. The right answer is "barks", but your definition is correct for "turkey".
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 > hardest card
-The hardest cards are "dog", "turkey". You have 1 errors answering them.
+The hardest cards are "cat", "turkey". You have 1 errors answering them.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> log
+File name:
+> log.txt
+The log has been saved.
 Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 > exit
 Bye bye!
