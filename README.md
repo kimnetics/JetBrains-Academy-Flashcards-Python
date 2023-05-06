@@ -83,4 +83,4 @@ Input the action (add, remove, import, export, ask, exit, log, hardest card, res
 Bye bye!
 ```
 
-For the most part, the wording was specified in the requirements and is being checked for by automated testing.
+For the most part, the wording was specified in the requirements and is being checked for by automated testing. There is not a lot of latitude to change the wording.
